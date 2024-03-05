@@ -20,20 +20,23 @@ public class Exercicio12 {
     }
 
     public static void main(String[] args){
+        int votos_c1, votos_c2, votos_c3, qnt_brancos, qnt_nulos, total_votos;
+        float porct_brancos, porct_nulos;
+
         entradaAbrir();
         
-        int votos_c1 = entradaInt("Insira a quantidade de votos do candidato C1: ");
-        int votos_c2 = entradaInt("Insira a quantidade de votos do candidato C2: ");
-        int votos_c3 = entradaInt("Insira a quantidade de votos do candidato C3: ");
-        int qnt_brancos = entradaInt("insira a quantidade de votos brancos: ");
-        int qnt_nulos = entradaInt("Insira a quantidade de votos nulos: ");
+        votos_c1 = entradaInt("Insira a quantidade de votos do candidato C1: ");
+        votos_c2 = entradaInt("Insira a quantidade de votos do candidato C2: ");
+        votos_c3 = entradaInt("Insira a quantidade de votos do candidato C3: ");
+        qnt_brancos = entradaInt("insira a quantidade de votos brancos: ");
+        qnt_nulos = entradaInt("Insira a quantidade de votos nulos: ");
 
         entradaFechar();
 
-        int total_votos = (votos_c1 + votos_c2 + votos_c3 + qnt_brancos + qnt_nulos);
-        double porct_brancos = (qnt_brancos*100)/total_votos;
-        double porct_nulos = (qnt_nulos*100)/total_votos;
-        
+        total_votos = (votos_c1 + votos_c2 + votos_c3 + qnt_brancos + qnt_nulos);
+        porct_brancos = (qnt_brancos*100)/total_votos;
+        porct_nulos = (qnt_nulos*100)/total_votos;
+
         saidaString("O total de votos é: " + total_votos);
         saidaString("A porcentagem de votos brancos é: " + porct_brancos);
         saidaString("A porcentagem de votos nulos é: " + porct_nulos);
