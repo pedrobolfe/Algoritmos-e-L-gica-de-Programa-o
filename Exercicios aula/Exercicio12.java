@@ -31,11 +31,10 @@ public class Exercicio12 {
         entradaFechar();
 
         int total_votos = (votos_c1 + votos_c2 + votos_c3 + qnt_brancos + qnt_nulos);
-        System.out.println("O total de votos é: " + total_votos);
-
         double porct_brancos = (qnt_brancos*100)/total_votos;
         double porct_nulos = (qnt_nulos*100)/total_votos;
-
+        
+        saidaString("O total de votos é: " + total_votos);
         saidaString("A porcentagem de votos brancos é: " + porct_brancos);
         saidaString("A porcentagem de votos nulos é: " + porct_nulos);
     }
