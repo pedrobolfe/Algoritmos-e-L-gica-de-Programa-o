@@ -32,7 +32,9 @@ public class Exercicio26 {
 
         hora_final = entradaInt("Digite a hora final: ");
         minutos_final = entradaInt("Digite o minuto final: ");
-
+        
+        entradaFechar();
+        
         minutos_iniciais_totais = hora_inicial*60 + minutos_inicial;
         minutos_finais_totais = hora_final*60 + minutos_final;
 
@@ -44,6 +46,6 @@ public class Exercicio26 {
         
         saidaString(hora_jogo + "h " + minutos_jogo + "min");
 
-        entradaFechar();
+        
     }
 }
