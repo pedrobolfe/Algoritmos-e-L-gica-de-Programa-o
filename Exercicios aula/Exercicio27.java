@@ -173,12 +173,12 @@ public class Prodecimentos {
         float desconto2 = Float.parseFloat(artigo2[2]);
         float valor_desconto2 = (float) (preco2 - (preco2*(desconto2/100.0f)));
         // artigo 03
-        float preco3 = Float.parseFloat(artigo1[1]);
-        float desconto3 = Float.parseFloat(artigo1[2]);
+        float preco3 = Float.parseFloat(artigo3[1]);
+        float desconto3 = Float.parseFloat(artigo3[2]);
         float valor_desconto3 = (float) (preco3 - (preco3*(desconto3/100.0f)));
         // artigo 04
-        float preco4 = Float.parseFloat(artigo1[1]);
-        float desconto4 = Float.parseFloat(artigo1[2]);
+        float preco4 = Float.parseFloat(artigo4[1]);
+        float desconto4 = Float.parseFloat(artigo4[2]);
         float valor_desconto4 = (float) (preco4 - (preco4*(desconto4/100.0f)));
         
         // imprimir dados artigos
