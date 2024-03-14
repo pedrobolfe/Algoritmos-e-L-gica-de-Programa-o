@@ -111,11 +111,13 @@ public class Prodecimentos {
     public static void imprimir_antecessor_sucessor(int num){
         System.out.printf("Seu antecessor é " + (num-1) + ", o sucessor é "+ (num+1));    
     }
+    
 // 12 Elaborar um procedimento para ler um número inteiro e imprima a soma do dobro do sucessor com o dobro do seu antecessor.    
     public static void imprimir_dobro_antecessor_dobro(int num){
         int soma = ((num-1)*2) + ((num+1)*2);
         System.out.println("A soma do dobro do antecessor e sucessor é " + soma);
     }
+    
 // 15 Considerando as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, 
 // litros consumidos e capacidade do tanque de combustível. Elaborar um programa e funções que emita um relatório na tela 
 // contendo os dados informado e qual o consumo do automóvel em km/litros e qual a sua autonomia (km/tanque).
@@ -128,6 +130,7 @@ public class Prodecimentos {
                            "\nConsumo do automóvel em (km/litros) = " + consumo + 
                            "\nAutonomia (km/tanque) = " + autonomia);
     }
+    
 // 16 Elaborar uma função para calcula o valor a ser pago pelos passageiros pelo excesso de bagagem. 
 // Considerando que até 25kg o valor é R$2.50 e o excedente custa R$0.75 por quilo. Por fim, exiba o peso total, 
 // o peso excedente e o valor a ser pago pelo passageiro.
@@ -189,7 +192,41 @@ public class Prodecimentos {
         System.out.println("Total a pagar = R$" + (valor_desconto1+valor_desconto2+valor_desconto3+valor_desconto4));
     }    
     
+// 20 Elaborar funções para determinar o salário líquido de um funcionário, assumindo que sobre seu salário bruto incide 
+// um desconto de 8.5% para a previdência, um desconto de 26.6% do imposto de renda. O algoritmo deve mostrar o nome do 
+// funcionário, o seu salário bruto, desconto previdência, imposto de renda e salário líquido. OBS.: Uma função para desconto 
+// da previdência, uma para calcular o imposto de renda e outra para calcular o salário líquido.
+    public static float desconto_previdencia(int salario){
+        return (float) salario*0.085f;
+    }
+    public static float imposto_renda(int salario){
+        return (float) salario*0.266f;
+    }
+    public static void salario_liquido(String nome, int salario_bruto){
+        float desc_prev = desconto_previdencia(salario_bruto);
+        float desc_imposto = imposto_renda(salario_bruto);
+        System.out.println("Funcionário = " + nome +
+                           "\nSalário bruto = R$" + salario_bruto + 
+                           "\nDesconto previdencia = R$" + desc_prev + 
+                           "\nImposto de renda = R$" + desc_imposto +
+                           "\nSalario liquido = R$" + (salario_bruto - desc_prev - desc_imposto));
+    }
     
+// 21 Suponha que você foi ao supermercado e comprou:
+// N quilos de café, cujo custo unitário é Q;
+// L Litros de leite, com custo unitário de P;
+// B quilos de banana, com custo unitário de T.
+// Elabore um programa e funções que imprima: nome do produto, total gasto com cada produto e o total gasto no mercado.
+    public static void mercado_compras(int kg_cafe, float valor_cafe, int lit_leite, float valor_leite, int kg_banana, float valor_banana){
+        float cafe = (float) (kg_cafe*valor_cafe);
+        float leite = (float) (lit_leite*valor_leite);
+        float banana = (float) (kg_banana*valor_banana);
+        System.out.println("Café, R$" + cafe);
+        System.out.println("Leite, R$" + leite);
+        System.out.println("Banana, R$" + banana);
+        System.out.println("Valor total: " + (cafe + banana+ leite));
+    }
+
     public static void main(String[] args){
         System.out.println("Olá Mundo");
         entradaAbrir();
@@ -203,7 +240,9 @@ public class Prodecimentos {
         //eficiencia_carro(entradaString("Digite a marca do carro: "), 1752, 1956, 60, 100);
         //calculo_bagagem(20);
         //calculo_viajem(152.0f, 2.2f, 15.0f);
-        artigos_loja(artigo(), artigo(), artigo(), artigo());
+        //artigos_loja(artigo(), artigo(), artigo(), artigo());
+        //salario_liquido("Pedro", 1412);
+        mercado_compras(5, 90.56f, 5, 20, 3, 7.70f);
         entradaFechar();
     }
 }
