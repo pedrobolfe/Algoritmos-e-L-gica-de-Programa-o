@@ -4,7 +4,9 @@ public class Exercicio27 {
     static Scanner leitor;
 
     public static void entradaAbrir(){
-	@@ -11,27 +11,199 @@ public static void entradaFechar(){
+        leitor = new Scanner(System.in);
+    }
+	public static void entradaFechar(){
         leitor.close();
     }
 
@@ -30,5 +32,5 @@ public class Exercicio27 {
         imc = peso/Math.pow(altura, 2);
 
         System.out.printf("IMC: %.2f%n",  imc);
-    }
+    }   
 }
