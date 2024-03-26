@@ -23,6 +23,8 @@ public class Triangulo {
         float lado2 = entradaInt("Digite o lado 2: ");
         float lado3 = entradaInt("Digite o lado 3: ");
 
+        entradaFechar();
+        
         if ((lado1 + lado2) > lado3 & (lado1 + lado3) > lado2 & (lado3 + lado2) > lado1){
             System.out.println("Os lados acima formam um triângulo");
         } else {
