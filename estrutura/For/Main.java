@@ -35,7 +35,7 @@ public class Main {
 
     public static void numPerfeito(){ // numeros perfeitos num intervalo de 1 a 10000
         int aux;
-        for (int i = 1; i <= 1000000; i++){
+        for (int i = 1; i <= 100000; i++){
             aux = 0;
             for (int j = 1; j < i; j++) {
                 if (i%j == 0){
@@ -48,28 +48,29 @@ public class Main {
 
         }
     }
-    // Desenvolva um algoritmo que pergunta um numero k ao usuário. E em seguida, mostre os k primeiros numeros primos
-    public static void numPrimo(){
-        entradaAbrir();
-        int num = lerInt("DIgite um numero: ");
-        entradaFechar();
-
-        for (int i = 2; i <= num; i++){ // for q vai ate o numero digitado
-            boolean primo = true;
-            for (int j = 2 ; j < i; j++) { // for para pegar a divisao e saber se eh primo
-                if (i%j == 0){
-                    primo = false;
-                    break;
-                }
+    
+    public static boolean primo(int num){
+        for (int i = 2 ; i < num; i++) { // for para pegar a divisao e saber se eh primo
+            if (num%i == 0){
+                return false;
             }
-            if (primo){
-                System.out.printf("%d e primo\n", i);
+        }return true;
+    }   
+    
+    public static void primosNprimeiros(int num){
+        int cont = 0, p = 2;
+        
+        while (cont <= num){
+            if (primo(p) == true){
+                System.out.printf("%d e primo\n", p);
+                cont ++;
             }
-        } 
+            p++;
+        }
     }
-
+    
 
     public static void main(String[] args){
-        numPrimo();
+        primosNprimeiros(100));
     }
 }
