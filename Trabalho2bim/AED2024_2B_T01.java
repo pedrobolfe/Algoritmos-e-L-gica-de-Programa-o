@@ -189,13 +189,13 @@ public class AED2024_2B_T01 {
 
     // feito e correto
     public static int caracteresParaInteiro(String entrada){// "181234" obs: nao da para usar char como parametro, caso usar, concatene com "" a esquerda
-    // https://www.alura.com.br/apostila-java-orientacao-objetos/o-pacote-java-lang
-    int aux = 0;
-    for (int i = 0; i < entrada.length(); i++){
-        int n = entrada.charAt(i) - '0'; // converte o caractere para inteiro
-        aux += n* Math.pow(10, entrada.length() -i -1); // n * a casa decimal dele, para chagar na casa deciaml pego a posicao do char pelo tamanho da string - a posicao do i - 1
-    }
-    return aux;// 151234
+        // https://www.alura.com.br/apostila-java-orientacao-objetos/o-pacote-java-lang
+        int aux = 0;
+        for (int i = 0; i < entrada.length(); i++){
+            int n = entrada.charAt(i) - '0'; // converte o caractere para inteiro
+            aux += n* Math.pow(10, entrada.length() -i -1); // n * a casa decimal dele, para chagar na casa deciaml pego a posicao do char pelo tamanho da string - a posicao do i - 1
+        }
+        return aux;// 151234
     }
 
     public static boolean verificaNum(char num){ 
